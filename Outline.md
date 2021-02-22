@@ -16,7 +16,7 @@
             - it's possible to have **instant** page load
         - it's not google product - but google will definitely not penalize you SEO for using it 
     - How does it work
-        - AMP fremework
+        - AMP framework
         - AMP infrastructure
     - limitations
 4. DotVVM.AMP
@@ -27,11 +27,11 @@
         - limitations
             - no postbacks allowed
             - No external JS allowed
-            - All CSS (after inlining and aggresive optimalization) under 75 kB
+            - All CSS (after inlining and aggressive optimization) under 75 kB
             - No !important in CSS
 
 
-        - What if my landing page does not fullwill those criteria
+        - What if my landing page does not fullfil those criteria
             - amp include / exclude annotations 
     - Demo
         - quick showdown of demo app
@@ -53,7 +53,7 @@
                 - fix via AMP exclude
             - complex page
                 - show that only DotVVM version exists
-                - show redirects between AMP version and normal version (seemless experience)
+                - show redirects between AMP version and normal version (seamless experience)
     - How does it work
         - summary of how DotVVM works
         - summary of what parts we need to change for AMP conversion
