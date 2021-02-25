@@ -5,6 +5,11 @@
     <h1>Today: <dot:Literal RenderSpanElement="false" ValueType="DateTime" FormatString="d" Text="{value: Date}" />
     <h2>Time travel machine</h2>
     <span>Sometimes it's just usefull to be able to relive yesterday.</span>
-    <dot:Button Click="{command: GoBack()}" Text="Go back in time!" />
+    <amp:Exclude>
+        <dot:Button Click="{command: GoBack()}" Text="Go back in time!" />
+    </amp:Exclude>
+    <amp:Include>
+        <h2>Sorry, time travel is not supported in AMP. Pages load so fast that you dont need it anyway.</h2>
+    </amp:Include>
 </dot:Content>
 

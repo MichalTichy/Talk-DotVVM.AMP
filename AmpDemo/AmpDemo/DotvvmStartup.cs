@@ -11,6 +11,7 @@ namespace AmpDemo
         // For more information about this class, visit https://dotvvm.com/docs/tutorials/basics-project-structure
         public void Configure(DotvvmConfiguration config, string applicationPath)
         {
+            config.AddDotvvmAmp();
             ConfigureRoutes(config, applicationPath);
             ConfigureControls(config, applicationPath);
             ConfigureResources(config, applicationPath);
@@ -18,8 +19,8 @@ namespace AmpDemo
 
         private void ConfigureRoutes(DotvvmConfiguration config, string applicationPath)
         {
-            config.RouteTable.Add("Default", "", "Views/Default.dothtml");
-            config.RouteTable.Add("ComplexElement", "complexElement", "Views/ComplexElement.dothtml");
+            config.RouteTable.AddWithAmp("Default", "", "Views/Default.dothtml",config);
+            config.RouteTable.AddWithAmp("ComplexElement", "complexElement", "Views/ComplexElement.dothtml",config);
             config.RouteTable.Add("ComplexPage", "complexPage", "Views/ComplexPage.dothtml");
         }
 
@@ -44,6 +45,8 @@ namespace AmpDemo
 
 		public void ConfigureServices(IDotvvmServiceCollection options)
         {
+            
+            options.AddDotvvmAmpSupport();
             options.AddDefaultTempStorages("temp");
 		}
     }
