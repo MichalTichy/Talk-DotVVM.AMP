@@ -1,4 +1,5 @@
-﻿using DotVVM.Framework.Configuration;
+﻿using DotVVM.AMP.Extensions;
+using DotVVM.Framework.Configuration;
 using DotVVM.Framework.ResourceManagement;
 using DotVVM.Framework.Routing;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,7 +11,6 @@ namespace AmpDemo
         // For more information about this class, visit https://dotvvm.com/docs/tutorials/basics-project-structure
         public void Configure(DotvvmConfiguration config, string applicationPath)
         {
-
             ConfigureRoutes(config, applicationPath);
             ConfigureControls(config, applicationPath);
             ConfigureResources(config, applicationPath);
@@ -33,7 +33,12 @@ namespace AmpDemo
             // register custom resources and adjust paths to the built-in resources
             config.Resources.Register("Styles", new StylesheetResource()
             {
-                Location = new UrlResourceLocation("~/style.css")
+                Location = new UrlResourceLocation("./style.css")
+            });
+            // register custom resources and adjust paths to the built-in resources
+            config.Resources.Register("SimpleStyle", new StylesheetResource()
+            {
+                Location = new UrlResourceLocation("./simpleStyle.css")
             });
         }
 

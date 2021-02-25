@@ -10,6 +10,7 @@
     <None Remove="dotvvm_serialized_config.json.tmp" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DotVVM.AMP" Version="0.1.9.2" />
     <PackageReference Include="DotVVM.AspNetCore" Version="2.5.0" />
 
   </ItemGroup>

@@ -1,11 +1,14 @@
 ﻿@viewModel AmpDemo.ViewModels.DefaultViewModel, AmpDemo
 @masterPage Views/MasterPage.dotmaster
 <dot:Content ContentPlaceHolderID="MainContent">
+    <dot:RequiredResource Name="SimpleStyle" />
+
     <img src="/DotVVM.AMP.png" />
+
     <dot:HtmlLiteral Html="{value: Html}"/>
-    <dot:GridView DataSource="{value: Data}">
-        <dot:GridViewTextColumn HeaderText="Index" ValueBinding="{value: Index}" />
-        <dot:GridViewTextColumn HeaderText="Text" ValueBinding="{value: Text}" />
-    </dot:GridView>
+    <dot:Repeater DataSource="{value: Data}">
+        <h3>{{value: Text}}</h3>
+        
+    </dot:Repeater>
     
 </dot:Content>
