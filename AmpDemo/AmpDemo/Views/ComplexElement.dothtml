@@ -1,0 +1,10 @@
+﻿@viewModel AmpDemo.ViewModels.ComplexElementViewModel, AmpDemo
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <h1>Today: <dot:Literal RenderSpanElement="false" ValueType="DateTime" FormatString="d" Text="{value: Date}" />
+    <h2>Time travel machine</h2>
+    <span>Sometimes it's just usefull to be able to relive yesterday.</span>
+    <dot:Button Click="{command: GoBack()}" Text="Go back in time!" />
+</dot:Content>
+

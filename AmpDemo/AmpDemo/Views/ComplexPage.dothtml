@@ -1,0 +1,21 @@
+﻿@viewModel AmpDemo.ViewModels.ComplexPageViewModel, AmpDemo
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    
+    <div IncludeInPage="{value: DeliveredItem==null}">
+        <h1>Food delivery service</h1>
+        <h2>What would you like to eat?</h2>
+        <dot:Repeater RenderWrapperTag="false" DataSource="{value: AvailableItems}">
+            <ItemTemplate>
+                <dot:RadioButton Text="{value: Name}" CheckedItem="{value: _root.SelectedFoodItem}" CheckedValue="{value: Id}" />
+            </ItemTemplate>
+        </dot:Repeater>
+        <dot:Button Text="Send order" Click="{command: Order()}" />
+    </div>
+    <div DataContext="{value: DeliveredItem}">
+        <h1>Here you go!</h1>
+        <img src="{value: Url}" />
+    </div>
+</dot:Content>
+
